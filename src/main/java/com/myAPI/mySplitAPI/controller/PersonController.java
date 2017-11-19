@@ -14,37 +14,32 @@ import com.myAPI.mySplitAPI.service.PersonService;
 
 @RestController
 public class PersonController {
-	
+
 	@Autowired
 	PersonService pService;
-	
+
 	@RequestMapping("/persons")
-	public List<Person> getAllUsers()
-	{
+	public List<Person> getAllUsers() {
 		return pService.getAllUsers();
 	}
-	
+
 	@RequestMapping("/totalUsers")
-	public int getCountofUsers()
-	{
+	public int getCountofUsers() {
 		return pService.getAllUsersCount();
 	}
-	
+
 	@RequestMapping("/persons/{name}")
-	public Person getUserByName(@PathVariable String name)
-	{
+	public Person getUserByName(@PathVariable String name) {
 		return pService.getUserByName(name);
 	}
-	
-	@RequestMapping(method=RequestMethod.DELETE,value="/persons/{name}")
-	public String deleteUserByName(@PathVariable String name)
-	{
+
+	@RequestMapping(method = RequestMethod.DELETE, value = "/persons/{name}")
+	public String deleteUserByName(@PathVariable String name) {
 		return pService.removeUserByName(name);
 	}
-	
-	@RequestMapping(method=RequestMethod.POST,value="/persons")
-	public String addUser(@RequestBody Person p)
-	{
+
+	@RequestMapping(method = RequestMethod.POST, value = "/persons")
+	public String addUser(@RequestBody Person p) {
 		return pService.addUser(p);
 	}
 

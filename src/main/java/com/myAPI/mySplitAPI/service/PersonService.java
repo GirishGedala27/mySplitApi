@@ -1,7 +1,6 @@
 package com.myAPI.mySplitAPI.service;
 
 import java.util.Arrays;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -14,16 +13,16 @@ public class PersonService {
 
 	private List<Person> personsList = new ArrayList<Person>(Arrays.asList(
 
-			new Person("Girish", "gedalagirish27@gmail.com", "06-27-1994", 16, 222),
-			new Person("Sushma", "sushmakandru24@gmail.com", "06-27-1994", 10, 22),
-			new Person("Harsha", "harshakandru24@gmail.com", "06-27-1994", 10, 252)
+			new Person("Girish", "gedalagirish27@gmail.com", 16, 222),
+			new Person("Sushma", "sushmakandru24@gmail.com", 10, 22),
+			new Person("Harsha", "harshakandru24@gmail.com", 10, 252)
 
 	));
 
 	public List<Person> getAllUsers() {
 		return personsList;
 	}
-		
+
 	public int getAllUsersCount() {
 		return personsList.size();
 	}
@@ -43,7 +42,7 @@ public class PersonService {
 		else
 			return "failed";
 	}
-	
+
 	public String removeUserByName(String name) {
 		for (Person p : personsList) {
 			if (p.getName().equals(name)) {
@@ -51,10 +50,10 @@ public class PersonService {
 				return "user deleted";
 			}
 		}
-			return "failed, no user found";
+		return "failed, no user found";
 	}
-	
-	public String updateUserByName(String name, Person updatedProfile){
+
+	public String updateUserByName(String name, Person updatedProfile) {
 		for (Person p : personsList) {
 			if (p.getName().equals(name)) {
 				personsList.remove(p);
