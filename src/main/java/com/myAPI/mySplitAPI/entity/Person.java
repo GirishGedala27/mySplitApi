@@ -1,31 +1,30 @@
 package com.myAPI.mySplitAPI.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
 
 	private String name;
 	private String email;
-	private Integer IOwe;
-	private Integer UOwe;
+	private double IOwe;
+	private double UOwe;
 
-	public int getTotalBalance() {
+	public double getTotalBalance() {
 		return (this.UOwe - this.IOwe);
 	}
-	
-	public Person(){
-		
+
+	public void updateIOwe(double updatedValue) {
+		this.IOwe = updatedValue;
 	}
 
-	public Person(String name, String email, Integer iOwe, Integer uOwe) {
-
-		this.name = name;
-		this.email = email;
-		IOwe = iOwe;
-		UOwe = uOwe;
+	public void updateUOwe(double updatedValue) {
+		this.UOwe = updatedValue;
 	}
-
 }
