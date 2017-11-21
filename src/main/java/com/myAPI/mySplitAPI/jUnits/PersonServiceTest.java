@@ -4,10 +4,11 @@ import static org.junit.Assert.*;
 import java.util.List;
 
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import com.myAPI.mySplitAPI.entity.Person;
 import com.myAPI.mySplitAPI.service.PersonService;
+
+
+
 
 public class PersonServiceTest {
 

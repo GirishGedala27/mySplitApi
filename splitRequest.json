@@ -1,0 +1,31 @@
+{
+    "splitValue": {
+        "totalSplitAmount": 100,
+        "totalSplitGroupCount": 5
+    },
+    "splitGroup": {
+        "splitGroupMembers": [
+            {
+                "name": "Girish",
+                "email": "gedalagirish27@gmail.com",
+                "iowe": 16,
+                "uowe": 222,
+                "totalBalance": 206
+            },
+            {
+                "name": "Sushma",
+                "email": "sushmakandru24@gmail.com",
+                "iowe": 10,
+                "uowe": 22,
+                "totalBalance": 12
+            },
+            {
+                "name": "Harsha",
+                "email": "harshakandru24@gmail.com",
+                "iowe": 10,
+                "uowe": 252,
+                "totalBalance": 242
+            }
+        ]
+    }
+}
